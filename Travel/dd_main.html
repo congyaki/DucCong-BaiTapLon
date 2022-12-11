@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Địa Điểm</title>
+    
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/dd.css">
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container-loader">
+        <div class="loader">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <header>
+        <div class="inner-width">
+            <a href="home.html" class="logo"><img src="./images/logo_main1.png" alt=""></a>
+            <i class="menu-toggle-btn fas fa-bars"></i>
+            <nav class="navigation-menu">
+                <a href="home.html"><i class="fas fa-home home"></i> Home</a>
+                <a href="#" class="active"><i class="fas fa-solid fa-location-arrow location"></i> Địa Điểm</a>
+                <a href="recommend.html"><i class="fab fa-buffer works"></i> Gợi ý</a>
+                <a href="sale-off.html"><i class="fa-solid fa-percent km"></i> Khuyến mãi</a>
+                <a href="aboutus.html"><i class="fas fa-users team"></i> About Us</a>
+                <a href="contact us.html"><i class="fa-solid fa-desktop contact"></i> Contact Us</a>
+                <a href="login.html"><i class="fa-solid fa-right-to-bracket login"></i> Login</a>
+
+            </nav>
+        </div>
+    </header>
+
+      <div class="container form-select">
+        <form action="" class="col-10 col-md-6">
+            <h1>Bạn muốn đi đâu đông này</h1>
+            <p>Địa điểm</p>
+            <select name="" id="">
+                <option value="#">--Chọn đia điểm--</option>
+            </select>
+            <p>Số người</p><input type="number" min="1" placeholder="Bạn đi bao nhiêu người">
+            <p>Ngày đi</p><input type="date">
+            <p>Ngày về</p><input type="date">
+            <button>Tìm kiếm</button>
+        </form>
+      </div>
+      
+
+      <section class="hotels">
+        <div class="container">
+            <h5 class="section-head">
+                <span class="heading">Địa Điểm</span>
+            </h5>
+            <div class="grid">
+                <div class="grid-item featured-hotels">
+                    <img src="./images/ha long 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Hạ Long</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/hue 2.jpeg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Huế</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/ha noi 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Hà Nội</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="hanoi.html" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/vung tau 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Vũng Tàu</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/phu quoc 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Phú Quốc</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/nha trang 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Nha Trang</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/hoi an 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Hội An</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/da nang 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Đà Nẵng</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/sai gon 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Sài Gòn</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/quang binh 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Quảng Bình</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/thanh hoa 2.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Thanh Hóa</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+
+                <div class="grid-item featured-hotels">
+                    <img src="./images/ha giang.jpg" class="hotel-image" alt="">
+                    <h5 class="hotel-name">Hà Giang</h5>
+                    <span class="hotel-price">Chỉ từ 400.000<sup>đ</sup>/đêm</span>
+                    <a href="#" class="btn btn-gradient">Xem Thêm
+                        <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-lg-3 brand">
+                    <a href="#" class="c-img brand-link">
+                        <img src="./images/logo_main1.png" alt="logo" class="brand-img-footer">
+                    </a>
+                </div>
+                <div class="col-lg-4 contact">
+                    <p>
+                        <i class="fa-solid fa-location-dot icon-contact"></i>
+                        <span class="contact-info address">CNTT 15-05, Đại học Đại Nam</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-phone icon-contact" aria-hidden="true"></i>
+                        <span class="phone contact-info">012345678</span>
+                    </p>
+                    <p>
+                        <i class="fa fa-envelope icon-contact" aria-hidden="true"></i>
+                        <span class="email contact-info">duccong29092003@gmail.com</span>
+                    </p>
+                    
+                </div>
+                <div class="col-lg-4 about">
+                    <h3 class="about-title">About us</h3>
+                    <p class="about-content">Hello chúng mình là Nhóm 4. Rất mong sẽ mang đến cho các bạn những trải nghiệm thật hay và thú vị.</p>
+                    <span class="container-icon">
+                        <a href="#">
+                            <i class="fa-brands fa-youtube icon-info"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-instagram icon-info"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-facebook icon-info"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+     </footer>
+
+    <script src="./js/home.js"></script>
+
+
+</body>
+</html>

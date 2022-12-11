@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <title>Trang thêm sản phẩm</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+
+    <div class="container">
+        <form
+ class="form"
+ @submit.prevent="checkForm"
+ method="post"
+>
+ <p>
+   <label for="name" class="col-form-label">Product Name</label>
+   <input class="form-control"
+     id="name"
+     v-model="name"
+     type="text"
+     name="name"
+     @blur="validate"
+     v-bind:class="{'is-invalid': errors.name}">
+     <span class="invalid-feedback" v-if="errors.name">{{ errors.name }}</span>
+ </p>
+ 
+
+ <p>
+   <label for="price" class="col-form-label">Product Price</label>
+   <input class="form-control"
+     id="price"
+     v-model="price"
+     type="number"
+     name="price"
+     min="0"
+     @blur="validate"
+     v-bind:class="{'is-invalid': errors.price}">
+     <span class="invalid-feedback" v-if="errors.price">{{ errors.price }}</span>
+ </p>
+
+ <p>
+    <label for="decscription" class="col-form-label">Product Decscription</label>
+    <textarea class="form-control"
+      id="description"
+      v-model="description"
+      name="decscription"
+      min="0" cols="30" rows="5"
+      @blur="validate"
+     v-bind:class="{'is-invalid': errors.description}">
+     </textarea>
+     <span class="invalid-feedback" v-if="errors.description">{{ errors.description }}</span>
+  </p>
+  <div class="form-group row">
+    <div class="col-sm-9">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="reset" class="btn btn-danger">Cancel</button>
+    </div>
+</div>
+</form>
+
+    </div>
+
+    <script src="./js/create-product.js"></script>
+</body>
+</html>

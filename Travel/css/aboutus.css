@@ -1,0 +1,133 @@
+:root{
+    --bg1: #9b59b6;
+    --bg2: #3498db;
+    --bg: #D7E1EC;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    background-image: linear-gradient(180deg, #041B2D, #004E9A);
+}
+
+/* .container{
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    background: linear-gradient(var(--bg1), var(--bg2));
+} */
+
+.container{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: linear-gradient(var(--bg1), var(--bg2));
+    transition: 0.25s;
+    overflow: hidden;
+    position: relative;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.container:hover{
+    padding-bottom: 20px;
+    width: 350px;
+    height: 450px;
+    border-radius: 10px;
+    background: linear-gradient(var(--bg1), var(--bg2));
+}
+
+.container img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.container img.active{
+    width: 350px;
+    height: 450px;
+    margin: 0;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+}
+
+/* .container img{
+    width: 350px;
+    height: 450px;
+    margin: 0;
+    border: 5px solid #ffffff;
+    border-radius: 10px;
+} */
+
+.container h2{
+    color: #ffffff;
+}
+
+.container p{
+    color: #ffffff;
+    margin: 0 30px 12px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 30px 12px;
+}
+
+.btn-container button{
+    height: 35px;
+    width: 150px;
+    border: none;
+    margin-right: 12px;
+    border-radius: 5px;
+    columns: #333333;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-container button:hover{
+    transform: scale(0.95);
+}
+
+.icon-social{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: 0.5s;
+    top: 12px;
+}
+
+.container:hover .icon-social{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.icon-social i{
+    padding: 12px;
+    color: var(--bg1);
+    background: #FFF;
+    border-radius: 50%;
+    margin: 5px 0 0 12px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.icon-social i:hover{
+    transform: scale(0.95);
+}

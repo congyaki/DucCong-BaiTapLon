@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+	<script src="./js/create-product.js"></script>
+	<link rel="stylesheet" href="./css/admin.css">
+
+	<title>AdminHub</title>
+</head>
+<body>
+
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand">
+			<i class='bx bxs-smile'></i>
+			<span class="text">AdminHub</span>
+		</a>
+		<ul class="side-menu top">
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard' ></i>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-shopping-bag-alt' ></i>
+					<span class="text">My Store</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-doughnut-chart' ></i>
+					<span class="text">Analytics</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-message-dots' ></i>
+					<span class="text">Message</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-group' ></i>
+					<span class="text">Team</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="side-menu">
+			<li>
+				<a href="#">
+					<i class='bx bxs-cog' ></i>
+					<span class="text">Settings</span>
+				</a>
+			</li>
+			<li>
+				<a href="#" class="logout">
+					<i class='bx bxs-log-out-circle' ></i>
+					<span class="text">Logout</span>
+				</a>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu' ></i>
+			<a href="#" class="nav-link">Categories</a>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<input type="checkbox" id="switch-mode" hidden>
+			<label for="switch-mode" class="switch-mode"></label>
+			<a href="#" class="notification">
+				<i class='bx bxs-bell' ></i>
+				<span class="num">8</span>
+			</a>
+			<a href="#" class="profile">
+				<img src="./images/cong.jpg">
+			</a>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<div class="container">
+			<form
+	 class="form"
+	 @submit.prevent="checkForm"
+	 method="post"
+	>
+	 <p>
+	   <label for="name" class="col-form-label">Product Name</label>
+	   <input class="form-control"
+		 id="name"
+		 v-model="name"
+		 type="text"
+		 name="name"
+		 @blur="validate"
+		 v-bind:class="{'is-invalid': errors.name}">
+		 <span class="invalid-feedback" v-if="errors.name">{{ errors.name }}</span>
+	 </p>
+	 
+	
+	 <p>
+	   <label for="price" class="col-form-label">Product Price</label>
+	   <input class="form-control"
+		 id="price"
+		 v-model="price"
+		 type="number"
+		 name="price"
+		 min="0"
+		 @blur="validate"
+		 v-bind:class="{'is-invalid': errors.price}">
+		 <span class="invalid-feedback" v-if="errors.price">{{ errors.price }}</span>
+	 </p>
+	
+	 <p>
+		<label for="decscription" class="col-form-label">Product Decscription</label>
+		<textarea class="form-control"
+		  id="description"
+		  v-model="description"
+		  name="decscription"
+		  min="0" cols="30" rows="5"
+		  @blur="validate"
+		 v-bind:class="{'is-invalid': errors.description}">
+		 </textarea>
+		 <span class="invalid-feedback" v-if="errors.description">{{ errors.description }}</span>
+	  </p>
+	  <div class="form-group row">
+		<div class="col-sm-9">
+			<button type="submit" class="btn btn-primary">Save</button>
+			<button type="reset" class="btn btn-danger">Cancel</button>
+		</div>
+	</div>
+	</form>
+	<script>
+		const form = new Vue({
+    el: '.form',
+    data: {
+      errors: {
+        name: '',
+        price: '',
+        description: '',
+      },
+      name: '',
+      price: '',
+      description: '',
+    },
+    methods:{
+      checkForm: function (e) {
+        this.validate();
+        if (this.name && this.price && this.description) {
+            alert("OK")
+          return true;
+        }
+      },
+      
+      validate(){
+        
+        if(!this.name) {
+            this.errors.name = 'Product name is required'
+        }
+        if(this.name) {
+            this.errors.name = null
+        }
+
+        if(!this.price) {
+            this.errors.price = 'Product price is required'
+        }
+
+        if(this.price) {
+            this.errors.price = null
+        }
+
+        if(!this.description) {
+            this.errors.description = 'Product description is required'
+        }
+
+        if(this.description) {
+            this.errors.description = null
+        }
+      },
+    }
+   })
+	</script>
+	
+		</div>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+
+	<script src="./js/admin.js"></script>
+
+	<script src="./js/create-product.js"></script>
+
+</body>
+</html>
